@@ -1,0 +1,136 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* Reset default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-screen layout */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make sure it covers the entire viewport height */
+  width: 100vw; /* Ensure it takes full screen width */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Responsive Form Container */
+.container {
+  width: 100%; /* Make form take full width */
+  max-width: 500px; /* Prevent it from getting too wide */
+  height: 90vh; /* Adjust height so it fits on screen */
+  max-height: 90vh; /* Prevent it from being too big */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center form contents */
+  overflow-y: auto; /* Allow scrolling if necessary */
+}
+
+/* Header */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f8f9fa;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1; /* Ensures form takes up available space */
+}
+
+/* Label Styling */
+label {
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Input Fields */
+input {
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+button {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0px 5px 15px rgba(79, 172, 254, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(79, 172, 254, 0.5);
+}
+
+/* Result Section */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffeb3b;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: 85vh;
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
